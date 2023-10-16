@@ -8,7 +8,7 @@ export const TypingText = ({ tittle, textStyles }) => (
     variants={textContainer}
     initial="hidden"
     whileInView="show"
-    className={`${textStyles} font-extrabold text-[36px] text-secondary-white`}
+    className={`${textStyles} font-normal text-[16px] text-secondary-white`}
   >
     {Array.from(tittle).map((letter, index) => (
       <motion.span key={index} variants={textVariant2}>
@@ -19,5 +19,10 @@ export const TypingText = ({ tittle, textStyles }) => (
 );
 
 export const TitleText = ({ tittle, textStyles }) => (
-  <h2>Title Text</h2>
+  <motion.h2
+    variants={textVariant2}
+    initial="hidden"
+    whileInView="show"
+    className={`${textStyles} font-bold mt-[8px] md:text-[64px] text-[40px] text-white`}
+  >{tittle}</motion.h2>
 );
